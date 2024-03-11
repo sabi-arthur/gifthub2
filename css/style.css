@@ -1,0 +1,292 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.grid-item {
+  height: 100vh; /* Set the height to 100% of viewport height */
+  overflow-y: hidden; /* Hide vertical scrollbar if content exceeds viewport height */
+  padding: 20px; /* Add padding as needed */
+  box-sizing: border-box; /* Ensure padding is included in the height */
+}
+
+
+
+/* Top Section */
+
+header {
+  background-color: #f5f5dc; /* Cream background color */
+  color: #000000;
+  padding: 15px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px; /* Set a maximum width for the nav */
+  margin: 0 auto; /* Center the nav */
+}
+
+.navbar-left p {
+  margin: 0; /* Remove default margin for the paragraph */
+}
+
+.navbar-left p {
+  font-size: 12px;
+}
+
+.navbar-right a {
+  color: #333; /* Change icon color */
+  text-decoration: none;
+  padding: 10px;
+  margin-left: 10px;
+}
+.navbar-right .social-icon {
+    color: #333; /* Adjust the icon color */
+    text-decoration: none;
+    font-size: 1.5em; /* Adjust the icon size */
+    margin-left: 5px; /* Reduce the margin between icons */
+}
+
+.navbar-right .social-icon:hover {
+    color: #4267B2; /* Change color on hover (Facebook) */
+}
+
+.navbar-right .social-icon:hover {
+    color: #405DE6; /* Change color on hover (Instagram) */
+}
+
+.navbar-right .social-icon:hover {
+    color: #0A66C2; /* Change color on hover (LinkedIn) */
+}
+
+.menu-icon {
+  cursor: pointer;
+  background-color:  rgb(225, 175, 132);
+}
+
+@media (max-width: 600px) {
+  .navbar-left {
+      flex-grow: 1;
+  }
+
+  .navbar-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+  }
+
+  .navbar-right a {
+      margin: 5px 0;
+  }
+
+  .menu-icon {
+      display: block; /* Show menu icon on smaller screens */
+  }
+}
+
+main {
+  padding: 0; /* Remove padding to ensure full width */
+}
+
+@media (max-width: 600px) {
+  nav {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav a {
+      margin: 5px 0;
+  }
+
+  
+}
+
+/* Top Section End */
+
+/* Main Section */
+
+
+main {
+  /* padding: 10px; */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap:0; /* Adjust the gap between images */
+  /* margin: 20px; */
+  overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+
+.grid-item {
+  height: 200px; /* Set your desired height */
+  background-size: cover;
+}
+
+.grid-item:hover {
+  cursor: pointer; /* Change the cursor on hover */
+}
+
+.item1 {
+  position: relative;
+  height: 400px;
+  grid-column: span 2;
+  grid-row: span 2;
+  background-image: url('../images/mrs.png'); /* Replace with your image URL */
+  background-size: cover; /* Adjust as needed */
+}
+
+.item1::before {
+  content: "WELCOME TO TOKENS OF SENTIMENT";
+  position: absolute;
+  top: 50%; /* Adjust to position vertically */
+  left: 50%; /* Adjust to position horizontally */
+  width: 5cm;
+  height: 3cm;
+  transform: translate(-50%, -50%);
+  background-color:  rgb(225, 175, 132); 
+  color: #fff; /* Set the text color */
+    text-align: center; /* Center the text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+}
+
+
+.item1::before p {
+  margin: 5px; /* Add margin to paragraphs within the ::before pseudo-element */
+}
+
+.item1::before .large-text {
+  font-size: 16px;
+}
+
+.item1::before .small-text {
+  content: TOKENS OF SENTIMENT;
+  font-size: 10px;
+}
+
+.item2 {
+  background-color: #9c1863; /* Replace with your image URL */
+  color: #fff; /* Set the text color */
+  text-align: center; /* Center the text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Stack the elements vertically */
+}
+
+
+.item3 {
+  background-image: url('../images/mugperfume.png'); /* Replace with your image URL */
+}
+.item4 {
+  background-image: url('../images/wedding.png'); /* Replace with your image URL */
+}
+.item5 {
+  background-color: rgb(225, 175, 132);  /* Replace with your image URL */
+    color: #fff; /* Set the text color */
+    text-align: center; /* Center the text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack the elements vertically */
+  
+}
+
+.item6 {
+  background-image: url('../images/variety.png' ); /* Replace with your image URL */
+}
+.item7 {
+  background-color: rgb(225, 175, 132); /* Replace with your image URL */
+  color: #fff; /* Set the text color */
+  text-align: center; /* Center the text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Stack the elements vertically */
+
+}
+.item8 {
+  background-color: rgb(132, 180, 225); /* Replace with your image URL */
+  color: #fff; /* Set the text color */
+  text-align: center; /* Center the text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Stack the elements vertically */
+
+}
+.item9 {
+  background-image: url('../images/woos.png '); /* Replace with your image URL */
+}
+
+.large-text {
+  font-size: 16px; /* Adjust the font size for the large text */
+  margin: 10; /* Remove default margin for the paragraph */
+}
+
+.small-text {
+  font-size: 10px; /* Adjust the font size for the smaller text */
+  margin: 10; /* Remove default margin for the paragraph */
+}
+
+  a {
+    text-decoration: none;
+}
+
+h1{
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2em;
+}
+
+.item {
+  width: 30%;
+  margin: 1em;
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.item img.clicked {
+  transform: scale(1.5);
+}
+
+.item {
+  position: relative;
+}
+
+p{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
